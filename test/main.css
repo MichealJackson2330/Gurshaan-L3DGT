@@ -22,17 +22,10 @@ body {
 }
 .header {
     grid-area: header;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
 
 }
 .navigationbar {
@@ -40,6 +33,8 @@ body {
     padding-top: 10px;
     margin-bottom: 0;
     background: none;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
 .body {

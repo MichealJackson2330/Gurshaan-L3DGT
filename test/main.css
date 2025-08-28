@@ -46,15 +46,11 @@ body {
 
 
 
-.navigationbar {
-    display: grid;
-    grid-area: navigationbar;
-    padding-top: 10px;
-    margin-bottom: 0;
-    background: none;
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
+.header a,
+.navigationbar a {
+    text-decoration: none;
+    color: inherit;        
+    display: inline-block;
 }
 
 
@@ -68,6 +64,19 @@ body {
     transition: filter 120ms ease, transform 120ms ease;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+
+.navigationbar {
+    display: grid;
+    grid-area: navigationbar;
+    padding-top: 10px;
+    margin-bottom: 0;
+    background: none;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 

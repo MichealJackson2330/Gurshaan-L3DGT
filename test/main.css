@@ -16,6 +16,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "header header header header"
+        "pagelink pagelink pagelink pagelink "
         "navigationbar navigationbar navigationbar navigationbar"
         "body body body body"
         "footer footer footer footer";
@@ -37,16 +38,29 @@ body {
 
 .header {
     grid-area: header;
-    padding: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
     text-align: center;
     font-size: 40px;
     font-weight: 900;
 
 }
 
+.pagelink {
+    grid-area: pagelink;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 900;
+
+}
 
 
 .header a,
+.pagelink a,
 .navigationbar a {
     text-decoration: none;
     color: inherit;        
@@ -56,8 +70,8 @@ body {
 
 
 .header .importance:hover,
+.pagelink .importance:hover,
 .navigationbar .importance:hover,
-.header a:hover .importance,
 .navigationbar a:hover .importance {
     filter: brightness(0.95);
     transform: translateY(-10px);

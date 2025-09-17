@@ -8,6 +8,7 @@ body {
     background-color: #e7e7e7;
     margin: 2% 2% 2% 2%;
     padding: 0;
+    font-family: 'montserrat', sans-serif;
 }
 
  
@@ -53,7 +54,7 @@ body {
     padding-right: 5px;
     padding-left: 5px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
 
 }

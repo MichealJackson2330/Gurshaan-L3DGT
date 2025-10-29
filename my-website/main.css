@@ -16,6 +16,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
+        "navbar navbar navbar navbar"
         "header header header header"
         "pagelink pagelink pagelink pagelink "
         "body body body body"
@@ -35,6 +36,48 @@ body {
     margin: 0;
 }
 
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px;
+    height: 56px;
+    background: #ff6f3c;
+    color: #fff;  
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+ 
+.logo {
+    width: 80px;
+}
+ 
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+ 
+
+.navbar a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+ 
+
+.navbar a:hover, .navbar a.active {
+    color: black;
+}
 
 
 .header {

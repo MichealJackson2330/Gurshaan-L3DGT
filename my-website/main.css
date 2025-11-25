@@ -5,7 +5,7 @@
 
 
 body {
-    background-color: #e7e7e7;
+    background-color: #FAF9F6;
     margin: 2% 2% 2% 2%;
     padding: 0;
     font-family: 'montserrat', sans-serif;
@@ -42,9 +42,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 16px;
+    padding: 0px 16px;
     height: 56px;
-    background: #ff6f3c;
+    background: #fff2d7;
     color: #fff;  
     box-shadow: 0 2px 6px rgba(0,0,0,0.12);
     position: sticky;
@@ -54,7 +54,20 @@ body {
 }
  
 .logo {
-    width: 80px;
+    width: px;
+    height: auto;
+    display: block;
+    max-width: none;
+}
+
+.logo,
+.logo img,
+.navbar img {
+    width: 160px;
+    height: auto;
+    max-width: none;
+    display: block;
+    object-fit: contain;
 }
  
 .navbar ul {
@@ -170,7 +183,7 @@ body {
     grid-area: navigationbar;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 10px;
+    padding: 10px 0 24px;
     gap: 60px;
 
 }
@@ -213,4 +226,41 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 1rem;
+}
+
+
+.java-carousel {
+    max-width: 900px;
+    margin: 0.5rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 8px;
+}
+
+
+.footer {
+    grid-area: footer;
+    background: #669bbc;
+    color: #fff;
+   padding: 24px 16px 12px;
+    text-align: center;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+}
+  
+.footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
 }

@@ -43,3 +43,15 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlide(slideIndex);
     resetAutoSlide();
 });
+
+// Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navbar = document.querySelector('.navbar');
+    if (navToggle && navbar) {
+        navToggle.addEventListener('click', function () {
+            const isOpen = navbar.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+});

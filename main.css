@@ -88,6 +88,33 @@ body {
     color: black;
 }
 
+/* Hamburger / mobile nav styles */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+.nav-toggle .hamburger {
+    width: 24px;
+    height: 2px;
+    background: #333;
+    position: relative;
+    display: inline-block;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #333;
+}
+.nav-toggle .hamburger::before { top: -7px; }
+.nav-toggle .hamburger::after { top: 7px; }
+
 
 .header {
     grid-area: header;
@@ -275,4 +302,146 @@ body {
     margin: 0;
     font-size: 0.95rem;
     font-weight: 600;
+}
+
+/* Responsive adjustments for tablets and phones */
+/* Make images fluid and override fixed carousel sizing on small screens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "navbar"
+            "header"
+            "pagelink"
+            "java-carousel"
+            "body"
+            "navigationbar"
+            "footer";
+        padding: 0 12px;
+    }
+
+    .body {
+        grid-template-columns: 1fr;
+        padding: 12px 6px;
+    }
+
+    .navigationbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        padding: 8px 0 16px;
+    }
+
+    .nav-section {
+        width: 48%;
+        box-sizing: border-box;
+        margin: 6px 4px;
+        height: auto;
+    }
+
+    .java-carousel {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 0.5rem;
+    }
+
+    .navbar {
+        padding: 8px 12px;
+        height: auto;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+
+    /* Hide the nav by default on small screens; show when .open class is applied */
+    .navbar nav {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar.open nav {
+        display: block;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 0;
+        margin: 0;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+        gap: 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 8px 0 0 0;
+    }
+
+    .logo,
+    .navbar img {
+        width: 110px;
+        height: auto;
+    }
+
+    .header {
+        font-size: 26px;
+        padding: 8px 6px;
+    }
+
+    .java-carousel {
+        height: 220px;
+    }
+
+    .carousel-slide img {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .grid-item {
+        padding: 12px;
+        min-height: auto;
+    }
+
+    .nav-section {
+        width: 100%;
+        margin: 6px 0;
+        padding: 12px;
+    }
+
+    .pagelink a {
+        padding: 8px 14px;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0 8px;
+    }
+}
+
+/* Small touch improvements */
+.navbar a {
+    white-space: nowrap;
 }
